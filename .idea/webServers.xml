@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="aca2dd0c-f1c1-4774-b3a5-62bb94127845" name="mutimodal">
+        <fileTransfer rootFolder="/home/wangyingli" accessType="SFTP" host="[2400:dd01:102e:44:4a6a:276a:fa7d:1b87]" port="22" sshConfigId="a9be044d-f75e-420a-b6c6-7b8d482e51c1" sshConfig="wangyingli@[2400:dd01:102e:44:4a6a:276a:fa7d:1b87]:22 agent" authAgent="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
