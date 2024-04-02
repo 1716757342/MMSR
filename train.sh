@@ -1,8 +1,8 @@
 
-CUDA_VISIBLE_DEVICES='1,2,4' python -m symformer train \
+CUDA_VISIBLE_DEVICES='1,2,4' python -m MMSR train \
     --config configs/bivariate.json \
-    --dataset-path /home/wangyingli/liyanjie/Expressions/data/train/bivariate/ \
-    --dataset-valid-path /home/wangyingli/liyanjie/Expressions/data/valed/
+    --dataset-path path/to/train/data/ \
+    --dataset-valid-path path/to/valed/data/
 
 
 
