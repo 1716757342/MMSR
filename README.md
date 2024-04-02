@@ -19,10 +19,10 @@ MMSR is a new symbolic regression algorithm. It regards symbolic regression as a
 
 You can download the pre-trained model from the following links. 
 
-1,https://huggingface.co/Yanjie-CN/MMSR/tree/main
+1, https://huggingface.co/Yanjie-CN/MMSR/tree/main
 
 
-2,https://pan.baidu.com/s/1VzBbL48u0F7mt20mL-FPNA?pwd=p2ir
+2, https://pan.baidu.com/s/1VzBbL48u0F7mt20mL-FPNA?pwd=p2ir
 <br>
 
 ## Getting started
