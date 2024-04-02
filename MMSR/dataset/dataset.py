@@ -31,7 +31,7 @@ class GeneralDataset(SymbolicExpressionDataset):
         return "general"
 
     def build(self, size):
-        from symformer.dataset.utils.expression import generate_random_expression
+        from MMSR.dataset.utils.expression import generate_random_expression
 
         rng = np.random.default_rng(seed=self.seed)
         variables = ["x"]

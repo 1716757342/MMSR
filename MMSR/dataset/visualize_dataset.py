@@ -7,9 +7,9 @@ import numpy as np
 import tensorflow as tf
 from matplotlib import pyplot as plt
 
-from symformer.dataset.tokenizers import GeneralTermTokenizer
-from symformer.dataset.utils.sympy_functions import evaluate_points, expr_to_func
-from symformer.dataset.utils.tree import prefix_to_infix
+from MMSR.dataset.tokenizers import GeneralTermTokenizer
+from MMSR.dataset.utils.sympy_functions import evaluate_points, expr_to_func
+from MMSR.dataset.utils.tree import prefix_to_infix
 
 
 def load_dataset(path):
@@ -85,7 +85,7 @@ def main(path: str, /, num: int = 200):
 
     :param num: number of visualizations
     """
-    # path = '/home/liujingyi/symformer-main-ljy/symformer-main/data/train/bivariate/'
+    # path = '/home/liujingyi/MMSR-main-ljy/MMSR-main/data/train/bivariate/'
     dataset = load_dataset(path).take(num * 10)
     vizualize_dataset(dataset)
 

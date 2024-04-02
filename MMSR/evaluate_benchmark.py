@@ -7,8 +7,8 @@ import typing as t
 import numpy as np
 from aclick import command
 
-from symformer.model.runner import Runner
-from symformer.model.utils.const_improver import OptimizationType
+from MMSR.model.runner import Runner
+from MMSR.model.utils.const_improver import OptimizationType
 
 
 def process_benchmark(expression):

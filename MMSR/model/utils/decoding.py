@@ -6,9 +6,9 @@ import tensorflow as tf
 
 from official.nlp.modeling.ops import sampling_module
 
-from symformer.dataset.tokenizers import Tokenizer
-from symformer.model.base import TransformerBase
-from symformer.model.utils.convertor import Convertor
+from MMSR.dataset.tokenizers import Tokenizer
+from MMSR.model.base import TransformerBase
+from MMSR.model.utils.convertor import Convertor
 
 
 def get_empty_tensor(dtype: tf.dtypes.DType, shape=(0, 0)):

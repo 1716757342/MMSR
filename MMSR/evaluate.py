@@ -4,13 +4,13 @@ import numpy as np
 import tensorflow as tf
 from aclick import command
 
-from symformer.dataset.tokenizers import GeneralTermTokenizer
-from symformer.dataset.utils.tree import prefix_to_infix
-from symformer.model.model import TransformerType
-from symformer.model.runner import Runner
-from symformer.model.utils.const_improver import OptimizationType
-from symformer.model.utils.convertor import clean_expr
-from symformer.training.datasets import get_datasets
+from MMSR.dataset.tokenizers import GeneralTermTokenizer
+from MMSR.dataset.utils.tree import prefix_to_infix
+from MMSR.model.model import TransformerType
+from MMSR.model.runner import Runner
+from MMSR.model.utils.const_improver import OptimizationType
+from MMSR.model.utils.convertor import clean_expr
+from MMSR.training.datasets import get_datasets
 
 
 @command("evaluate")

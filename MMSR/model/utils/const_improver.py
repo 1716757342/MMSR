@@ -12,7 +12,7 @@ import tensorflow as tf
 from scipy.optimize import minimize
 from sklearn.metrics import r2_score
 
-from symformer.dataset.tokenizers import GeneralTermTokenizer
+from MMSR.dataset.tokenizers import GeneralTermTokenizer
 
 
 def stack_with_pad(values, axis=0, *, pad_value=0):

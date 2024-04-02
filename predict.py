@@ -1,16 +1,16 @@
 # import aclick
 import aclick
 import multiprocessing
-from symformer.model.runner import Runner
-from symformer.model.utils.const_improver import OptimizationType
+from MMSR.model.runner import Runner
+from MMSR.model.utils.const_improver import OptimizationType
 multiprocessing.set_start_method('spawn', force=True)
 print('$'*50)
 import os
 
 # 指定使用第二个GPU(从0开始编号)
 os.environ['CUDA_VISIBLE_DEVICES'] = '3'
-from symformer.model.runner import Runner
-from symformer.model.utils.const_improver import OptimizationType
+from MMSR.model.runner import Runner
+from MMSR.model.utils.const_improver import OptimizationType
 print('os.environ = 3')
 # from model.runner import Runner
 # from model.utils.const_improver import OptimizationType

@@ -6,10 +6,10 @@ import numpy as np
 import tensorflow as tf
 from sympy import sympify, SympifyError
 
-from symformer import dataset
-from symformer.dataset.tokenizers import Tokenizer
-from symformer.dataset.utils.tree import prefix_to_infix
-from symformer.model.utils.const_improver import ConstImprover, OptimizationType
+from MMSR import dataset
+from MMSR.dataset.tokenizers import Tokenizer
+from MMSR.dataset.utils.tree import prefix_to_infix
+from MMSR.model.utils.const_improver import ConstImprover, OptimizationType
 
 
 def find_first_occurrence(arr, tokenizer):

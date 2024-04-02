@@ -1,11 +1,12 @@
-# SymFormer: End-to-end symbolic regression using transformer-based architecture
+# MMSR: Symbolic Regression is a multi-modal information fusion task
 
-This repository contains the official implementation of SymFormer. It is a symbolic regression method that uses a
-transformer model to generate a symbolic representation of a function based on the function's output.
+MMSR is a new symbolic regression algorithm. It regards symbolic regression as a task of multi-modal information fusion. Moreover, the experimental results show that it achieves the effect of SOTA on multiple symbolic regression datasets.
 
-[Paper](https://arxiv.org/pdf/2205.15764)&nbsp;&nbsp;&nbsp;
-[Web](https://vastlik.github.io/symformer/)&nbsp;&nbsp;&nbsp;
-[Demo](https://colab.research.google.com/github/vastlik/symformer/blob/main/notebooks/symformer-playground.ipynb)
+[//]: # ([Paper]&#40;https://arxiv.org/pdf/2205.15764&#41;&nbsp;&nbsp;&nbsp;)
+
+[//]: # ([Web]&#40;https://vastlik.github.io/symformer/&#41;&nbsp;&nbsp;&nbsp;)
+
+[//]: # ([Demo]&#40;https://colab.research.google.com/github/vastlik/symformer/blob/main/notebooks/symformer-playground.ipynb&#41;)
 
 <br>
 
@@ -16,24 +17,24 @@ transformer model to generate a symbolic representation of a function based on t
 
 ## Getting started
 
-Start by creating a Python 3.9 venv. From the activated environment, you can run the following command in the repository
-root:
+Begin by setting up a virtual environment with Python 3.9. Once it's active, proceed by executing the following command at the root level of the repository:
+
+
 
 ```
 pip install -r requirements.txt
 ```
 
-## Getting datasets
+## Data acquisition
 
-To generate a one-dimensional dataset (used to train the univariate model) run the following commands:
-
+To produce a one-dimensional dataset for training the univariate model, execute the commands below:
 ```
-python -m symformer generate-dataset \
+python -m MMSR generate-dataset \
     --output-dir general/train \
     --dataset-size 130000000 \
     --n-processes 128 \
     --seed 1234
-python -m symformer generate-dataset \
+python -m MMSR generate-dataset \
     --output-dir general/valid \
     --dataset-size 10000 \
     --n-processes 128 \
@@ -43,13 +44,13 @@ python -m symformer generate-dataset \
 To generate a two-dimensional dataset (used to train the bivariate model) run the following commands:
 
 ```
-python -m symformer generate-dataset \
+python -m MMSR generate-dataset \
     --output-dir general/train \
     --dataset-size 100000000 \
     --n-processes 128 \
     --seed 1234 \
     --num-variables 2
-python -m symformer generate-dataset \
+python -m MMSR generate-dataset \
     --output-dir general/valid \
     --dataset-size 10000 \
     --n-processes 128 \
@@ -57,7 +58,7 @@ python -m symformer generate-dataset \
     --num-variables 2
 ```
 
-For further hyperparameters see `python -m symformer generate-dataset --help`.
+For further hyperparameters see `python -m MMSR generate-dataset --help`.
 
 ## Running the inference
 
@@ -69,25 +70,25 @@ You can run your model by selecting your own trained model for `--model` param o
 To run a single equation:
 
 ```
-python -m symformer predict --model symformer-univariate 'sin(x**2)'
+python -m MMSR predict --model symformer-univariate 'x**2 + x'
 ```
 
 Output:
 
 ```
-Function: sin(((x)^2))
+Function: x^2 + x
 R2: 1.0
-Relative error: 5.582490629923639e-16
+Relative error: 4.21475839274614e-17
 ```
 
-You can also change the model to your own model.
+Additionally, you have the option to switch to a model of your choice.
 
-### Benchmark functions
+### Benchmark dataset
 
 To run the benchmark use command bellow:
 
 ```
-python -m symformer evaluate-benchmark --univariate-model symformer-univariate --bivariate-model symformer-bivariate
+python -m MMSR evaluate-benchmark --univariate-model MMSR-univariate --bivariate-model MMSR-bivariate
 ```
 
 ### Evaluation on dataset
@@ -95,7 +96,7 @@ python -m symformer evaluate-benchmark --univariate-model symformer-univariate -
 To run the evaluation on dataset run the following:
 
 ```
-python -m symformer evaluate --model symformer-univariate --test-dataset-path path/to/datast
+python -m MMSR evaluate --model MMSR-univariate --test-dataset-path path/to/datast
 ```
 
 ### Running equation prediction inside code
@@ -104,9 +105,9 @@ You can also run the code from the python using the `Runner` class. Example of s
 `notebooks/symformer-playground.ipynb`.
 
 ```python
-from symformer.model.runner import Runner
+from MMSR.model.runner import Runner
 
-runner = Runner.from_checkpoint('symformer-univariate')
+runner = Runner.from_checkpoint('MMSR-univariate')
 prediction, r2, relative_error = runner.predict('sin(x)')
 print(prediction, r2, relative_error)
 ```
@@ -120,9 +121,9 @@ sin(x) 1.0 0.0
 or for bivariate functions:
 
 ```python
-from symformer.model.runner import Runner
+from MMSR.model.runner import Runner
 
-runner = Runner.from_checkpoint('symformer-bivariate')
+runner = Runner.from_checkpoint('MMSR-bivariate')
 prediction, r2, relative_error = runner.predict('sin(x+y)')
 print(prediction, r2, relative_error)
 ```
@@ -138,7 +139,7 @@ sin(x+y) 1.0 0.0
 To train a model run the following:
 
 ```
-python -m symformer train \
+python -m MMSR train \
     --config configs/{config name}.json \
     --dataset-path /path/to/train/dataset/ \
     --dataset-valid-path /path/to/valid/dataset/
@@ -148,13 +149,3 @@ where `{config name}` is is one of the files contained in the `configs` director
 
 ## Citation
 
-If you found our work useful, please use the following citation:
-
-```
-@article{vastl2022symformer,
-  title={SymFormer: End-to-end symbolic regression using transformer-based architecture},
-  author={Vastl, Martin and Kulh{\'a}nek, Jon{\'a}{\v{s}} and Kubal{\'i}k, Ji{\v{r}}{\'i} and Derner, Erik and Babu{\v{s}}ka, Robert},
-  journal={arXiv preprint arXiv:2205.15764},
-  year={2022},
-}
-```

@@ -1,7 +1,7 @@
 import aclick
 import multiprocessing
-from symformer.model.runner import Runner
-from symformer.model.utils.const_improver import OptimizationType
+from MMSR.model.runner import Runner
+from MMSR.model.utils.const_improver import OptimizationType
 multiprocessing.set_start_method('spawn', force=True)
 print('$'*50)
 @aclick.command("predict")

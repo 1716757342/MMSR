@@ -7,11 +7,11 @@ import tensorflow as tf
 from sklearn.metrics import r2_score
 from sympy import sympify
 
-from symformer.dataset.tokenizers import GeneralTermTokenizer
-from symformer.dataset.utils import generate_all_possible_ranges
-from symformer.dataset.utils.sympy_functions import evaluate_points, expr_to_func
+from MMSR.dataset.tokenizers import GeneralTermTokenizer
+from MMSR.dataset.utils import generate_all_possible_ranges
+from MMSR.dataset.utils.sympy_functions import evaluate_points, expr_to_func
 
-from symformer.utils import pull_model
+from MMSR.utils import pull_model
 from .config import Config
 from .model import TransformerWithRegressionAsSeq
 from .utils.const_improver import OptimizationType

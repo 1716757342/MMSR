@@ -3,7 +3,7 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="/symformer/assets/benchmarks.csv">
+        <entry key="/MMSR/assets/benchmarks.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

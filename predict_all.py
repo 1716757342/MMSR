@@ -1,7 +1,7 @@
 # import aclick
 
-from symformer.model.runner import Runner
-from symformer.model.utils.const_improver import OptimizationType
+from MMSR.model.runner import Runner
+from MMSR.model.utils.const_improver import OptimizationType
 import multiprocessing
 import pandas as pd
 import re
@@ -15,8 +15,8 @@ import os
 
 # 指定使用第二个GPU(从0开始编号)
 os.environ['CUDA_VISIBLE_DEVICES'] = '2'
-from symformer.model.runner import Runner
-from symformer.model.utils.const_improver import OptimizationType
+from MMSR.model.runner import Runner
+from MMSR.model.utils.const_improver import OptimizationType
 print('os.environ = 2')
 
 def process_benchmark(expression):
@@ -38,7 +38,7 @@ def main(
         optimization_type: OptimizationType = "gradient",
 ):
     # function = '2*cos(x**2+y) + 4.5325'
-    benchmarks_path = './symformer/assets/benchmarks.csv'
+    benchmarks_path = 'MMSR/assets/benchmarks.csv'
     benchmarks = pd.read_csv(benchmarks_path, header=0)
     benchmarks = benchmarks.to_numpy()
     # print("benchmarks:", benchmarks)
