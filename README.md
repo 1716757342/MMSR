@@ -10,7 +10,7 @@ MMSR is a new symbolic regression algorithm. It regards symbolic regression as a
 
 <br>
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg?style=for-the-badge)](https://colab.research.google.com/github/vastlik/symformer/blob/main/notebooks/symformer-playground.ipynb)
+[//]: # ([![Open In Colab]&#40;https://colab.research.google.com/assets/colab-badge.svg?style=for-the-badge&#41;]&#40;https://colab.research.google.com/github/vastlik/symformer/blob/main/notebooks/symformer-playground.ipynb&#41;)
 ![Python Versions](https://img.shields.io/badge/Python-3.7%20%7C%203.8%20%7C%203.9-blue)
 
 <br>
@@ -63,14 +63,14 @@ For further hyperparameters see `python -m MMSR generate-dataset --help`.
 ## Running the inference
 
 You can run your model by selecting your own trained model for `--model` param or specifying one of the
-`symformer-univariate` or `symformer-bivariate` which will download the model from the repository.
+`MMSR-univariate` or `MMSR-bivariate` which will download the model from the repository.
 
 ### Single equation
 
 To run a single equation:
 
 ```
-python -m MMSR predict --model symformer-univariate 'x**2 + x'
+python -m MMSR predict --model MMSR-univariate 'x**2 + x'
 ```
 
 Output:
