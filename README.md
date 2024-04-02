@@ -17,7 +17,12 @@ MMSR is a new symbolic regression algorithm. It regards symbolic regression as a
 ![Python Versions](https://img.shields.io/badge/Python-3.7%20%7C%203.8%20%7C%203.9-blue)
 ## Model download
 
-You can download the pre-trained model from the following link. https://pan.baidu.com/s/1VzBbL48u0F7mt20mL-FPNA?pwd=p2ir
+You can download the pre-trained model from the following links. 
+
+1,https://huggingface.co/Yanjie-CN/MMSR/tree/main
+
+
+2,https://pan.baidu.com/s/1VzBbL48u0F7mt20mL-FPNA?pwd=p2ir
 <br>
 
 ## Getting started
