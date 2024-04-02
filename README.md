@@ -99,40 +99,6 @@ To run the evaluation on dataset run the following:
 python -m MMSR evaluate --model MMSR-univariate --test-dataset-path path/to/datast
 ```
 
-### Running equation prediction inside code
-
-You can also run the code from the python using the `Runner` class. Example of such code is in
-`notebooks/symformer-playground.ipynb`.
-
-```python
-from MMSR.model.runner import Runner
-
-runner = Runner.from_checkpoint('MMSR-univariate')
-prediction, r2, relative_error = runner.predict('sin(x)')
-print(prediction, r2, relative_error)
-```
-
-Output:
-
-```
-sin(x) 1.0 0.0
-```
-
-or for bivariate functions:
-
-```python
-from MMSR.model.runner import Runner
-
-runner = Runner.from_checkpoint('MMSR-bivariate')
-prediction, r2, relative_error = runner.predict('sin(x+y)')
-print(prediction, r2, relative_error)
-```
-
-Output:
-
-```
-sin(x+y) 1.0 0.0
-```
 
 ## Training a model from scratch
 
