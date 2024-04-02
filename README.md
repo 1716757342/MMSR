@@ -62,15 +62,13 @@ For further hyperparameters see `python -m MMSR generate-dataset --help`.
 
 ## Running the inference
 
-You can run your model by selecting your own trained model for `--model` param or specifying one of the
-`MMSR-univariate` or `MMSR-bivariate` which will download the model from the repository.
-
+You can specify your own path to trained models using --model, including 'MMSR-univariate' or 'MMSR-bivariate'.
 ### Single equation
 
 To run a single equation:
 
 ```
-python -m MMSR predict --model MMSR-univariate 'x**2 + x'
+python -m MMSR predict --model /path/to/MMSR-model 'x**2 + x'
 ```
 
 Output:
