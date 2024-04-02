@@ -88,7 +88,7 @@ Additionally, you have the option to switch to a model of your choice.
 To run the benchmark use command bellow:
 
 ```
-python -m MMSR evaluate-benchmark --univariate-model MMSR-univariate --bivariate-model MMSR-bivariate
+python -m MMSR evaluate-benchmark --univariate-model /path/to/MMSR-univariate --bivariate-model /path/to/MMSR-bivariate
 ```
 
 ### Evaluation on dataset
@@ -96,7 +96,7 @@ python -m MMSR evaluate-benchmark --univariate-model MMSR-univariate --bivariate
 To run the evaluation on dataset run the following:
 
 ```
-python -m MMSR evaluate --model MMSR-univariate --test-dataset-path path/to/datast
+python -m MMSR evaluate --model /path/to/MMSR-univariate --test-dataset-path /path/to/datast
 ```
 
 
@@ -111,7 +111,7 @@ python -m MMSR train \
     --dataset-valid-path /path/to/valid/dataset/
 ```
 
-where `{config name}` is is one of the files contained in the `configs` directory.
+where `{config name}` is one of the files contained in the `configs` directory.
 
 ## Citation
 
