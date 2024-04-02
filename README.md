@@ -10,9 +10,14 @@ MMSR is a new symbolic regression algorithm. It regards symbolic regression as a
 
 <br>
 
-[//]: # ([![Open In Colab]&#40;https://colab.research.google.com/assets/colab-badge.svg?style=for-the-badge&#41;]&#40;https://colab.research.google.com/github/vastlik/symformer/blob/main/notebooks/symformer-playground.ipynb&#41;)
-![Python Versions](https://img.shields.io/badge/Python-3.7%20%7C%203.8%20%7C%203.9-blue)
+[//]: # (链接: https://pan.baidu.com/s/1VzBbL48u0F7mt20mL-FPNA?pwd=p2ir 提取码: p2ir )
 
+[//]: # (--来自百度网盘超级会员v7的分享)
+[//]: # ([![Open In Colab]&#40;https://colab.research.google.com/assets/colab-badge.svg?style=for-the-badge&#41;]&#40;https://pan.baidu.com/s/1VzBbL48u0F7mt20mL-FPNA?pwd=p2ir&#41;)
+![Python Versions](https://img.shields.io/badge/Python-3.7%20%7C%203.8%20%7C%203.9-blue)
+## Model download
+
+You can download the pre-trained model from the following link. https://pan.baidu.com/s/1VzBbL48u0F7mt20mL-FPNA?pwd=p2ir
 <br>
 
 ## Getting started
