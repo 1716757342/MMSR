@@ -1,8 +1,8 @@
 from math import ceil
 import os
 import wandb
-os.environ["WANDB_API_KEY"]  = '4991d4444950e837e37f9c06fe1b61fb5b978938'
-os.environ["WANDB_MODE"] = "offline"
+os.environ["WANDB_API_KEY"]  = 
+os.environ["WANDB_MODE"] = 
 import aclick
 
 import tensorflow as tf
